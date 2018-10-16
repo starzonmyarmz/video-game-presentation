@@ -32,23 +32,8 @@ section {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 7rem;
   line-height: 1.2;
-  margin-top: 0;
-}
-
-h3 {
-  color: #555;
-  font-size: 3rem;
-  font-weight: normal;
-  margin-bottom: 0;
-}
-
-h4 {
-  color: #888;
-  font-size: 1.5rem;
-  font-style: italic;
-  font-weight: normal;
   margin-top: 0;
 }
 
@@ -71,20 +56,37 @@ svg {
 
 
 
+/*  Meta Slide  */
+
+
+#aa h3 {
+  font-size: 4rem;
+  margin: 1rem 0 0;
+}
+
+#aa h4 {
+  color: #888;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: normal;
+  margin-top: 0;
+}
+
 .meta {
-  padding-left: 124px;
+  height: 400px;
   position: relative;
+  width: 400px;
 }
 
 .meta img {
-  position: absolute;
   height: 100%;
-  left: 0;
+  position: absolute;
+  width: 100%;
 }
 
 .kappa {
   opacity: 0;
-  animation: fadein .5s 1s forwards;
+  animation: fadein .4s 1s forwards;
 }
 
 @keyframes fadein {
