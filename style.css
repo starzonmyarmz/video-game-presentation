@@ -18,6 +18,7 @@ main {
 }
 
 section {
+
   flex: 0 0 auto;
   height: 100vh;
   padding: 2rem 4rem 2rem 4rem;
@@ -104,7 +105,7 @@ svg {
 }
 
 #guy {
-  animation: moving 2.5s infinite linear;
+  animation: moving 4s infinite linear;
 }
 
 #left-foot,
@@ -124,10 +125,10 @@ svg {
 
 @keyframes moving {
   0% {
-    transform: translateX(calc(0vw - 52px));
+    transform: translateX(calc(0vw - 500px));
   }
   100% {
-    transform: translateX(100vw);
+    transform: translateX(calc(100vw + 500px));
   }
 }
 
@@ -135,4 +136,16 @@ svg {
   50% {
     transform: translateY(-2px);
   }
+}
+
+
+
+/*  Animation Play/Pause  */
+
+section * {
+  animation-play-state: paused !important;
+}
+
+section.in-viewport * {
+  animation-play-state: running !important;
 }
