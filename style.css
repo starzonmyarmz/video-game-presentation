@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+body {
+  color: #222;
+  margin: 0;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -15,7 +20,7 @@ main {
 section {
   flex: 0 0 auto;
   height: 100vh;
-  padding: 2rem 4rem 2rem 2rem;
+  padding: 2rem 4rem 2rem 4rem;
   position: relative;
   width: 100vw;
 }
@@ -51,4 +56,83 @@ a {
 img {
   max-height: calc(100vh - 4rem);
   max-width: calc(100vh - 6rem);
+}
+
+svg {
+  vertical-align: middle;
+}
+
+
+
+.meta {
+  padding-left: 124px;
+  position: relative;
+}
+
+.meta img {
+  position: absolute;
+  height: 100%;
+  left: 0;
+}
+
+.kappa {
+  opacity: 0;
+  animation: fadein .5s 1s forwards;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+
+
+
+
+/* ONOFF Style */
+
+#stage {
+  bottom: 0;
+  margin: 0 0 0 -4rem;
+  position: absolute;
+  shape-rendering: crispEdges;
+  width: 100vw;
+}
+
+#guy {
+  animation: moving 2.5s infinite linear;
+}
+
+#left-foot,
+#right-foot {
+  animation: walking 0.2s infinite;
+}
+
+#right-foot {
+  animation-delay: 0.1s;
+}
+
+#head {
+  animation: walking 0.4s infinite;
+  position: relative;
+  z-index: 5;
+}
+
+@keyframes moving {
+  0% {
+    transform: translateX(calc(0vw - 52px));
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes walking {
+  50% {
+    transform: translateY(-2px);
+  }
 }
